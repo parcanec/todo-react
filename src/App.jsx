@@ -5,9 +5,12 @@ import Input from './components/input.jsx'
 import Item from './components/item.jsx'
 
 const LIST = [
-  {name:'create a new practice task', status: 'done'},
-  {name:'make a bed', status: 'done'},
-  {name:'write a post', status: 'todo'}
+  {name:'make a 0', status: 'done'},
+  {name:'make a 1', status: 'done'},
+  {name:'make a 2', status: 'done'},
+  {name:'make a 3', status: 'done'},
+  {name:'make a 4', status: 'done'},
+  {name:'write a post 5', status: 'todo'}
 ]
 
 function App() {

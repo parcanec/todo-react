@@ -4,7 +4,7 @@ const Item = (props) => {
     return (
         <div className="task_list">
         <label><input type="radio" checked={props.status==='done'}/>{props.name}</label>
-        <button id="delButton" onClick={() => {alert('Функция removeItem')} }>×</button>
+        <button id="delButton" onClick={() => {props.removeItem(props.number)} }>×</button>
         </div>
     );
 };
