@@ -9,9 +9,16 @@ const Todo = (props) => {
     function removeItem (number) {
         setTodoList(todoList.filter((item, index)=>index!==number))
     }
-    
-    function addItem (task) {
-        console.log(task)
+
+    function addItem (name, status = 'done') {
+        const newList = [...todoList, {name, status}]
+        setTodoList(newList)
+    }
+
+    function changeStatus (number) {
+        const array = [...todoList]
+        array[number].status = array[number].status === 'done'  ? 'todo' : 'done'
+        setTodoList(array)
     }
 
     return (
@@ -20,7 +27,8 @@ const Todo = (props) => {
             <Input addItem={addItem} task={props.task}/>
             {
                 todoList.map((item, index) => <Item 
-                    removeItem={removeItem} 
+                    removeItem={removeItem}
+                    changeStatus={changeStatus} 
                     name={item.name} 
                     status={item.status} 
                     number={index}/>)

@@ -6,7 +6,10 @@ const Input = (props) => {
 
     const  submit = (env) => { 
         env.preventDefault()
-        props.addItem(text)
+        if (text !== '') {
+            props.addItem(text)
+            setText('')
+        }
     }
 
     return (
