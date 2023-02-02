@@ -3,6 +3,7 @@ import './App.css'
 import Todo from './components/todo.jsx'
 import Input from './components/input.jsx'
 import Item from './components/item.jsx'
+//import useScreen from './hooks/useScreen'
 
 const LIST = [
   {name:'make a 0', status: 'done'},
@@ -21,5 +22,6 @@ function App() {
     </div>
   )
 }
-
+//<p>{isMobile?'это телефон':'это десктоп'}</p>
+//const {isMobile} = useScreen()
 export default App
